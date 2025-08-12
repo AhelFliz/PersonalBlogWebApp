@@ -1,0 +1,14 @@
+<div style="display: block;">
+	<%= form_with model: @article do |f| %>
+		<div>
+			<%= f.text_field :title, class: "little-text-field", placeholder: "Title" %>
+		</div>
+		<div>
+			<%= f.text_area :content, class: "big-text-field", placeholder: "Content"%>
+		</div>
+
+		<div style= "margin: 10px;">
+			<%= f.submit %>
+		</div>
+	<% end %>
+</div>

@@ -1,0 +1,33 @@
+<div>
+  <div>
+    <%= link_to "←", articles_path, style: "font-size: 40px;" %>
+  </div>
+
+  <div class="general-div">
+    <div>
+      <div>
+      <h1><%= @article.title %></h1>
+      <h3><%= @article.created_at.to_formatted_s(:short) %></h3>
+    </div>
+    
+    <div>
+      <div>
+        <%= @article.content %>
+
+        <% if @current_user %>
+          <div style="display: flex;  justify-content: space-between; margin-top: 20px;">
+            <div>
+            <%= button_to "Delete", @article, method: :delete, data: {  turbo_confirm: "are u sure?"} %>
+          </div>
+
+          <div>
+            <%= button_to "edit article", edit_article_path, method: :get %>
+          </div>
+          </div>
+        <% end %> 
+      </div>
+    </div>
+  </div>
+</div>
+
+
