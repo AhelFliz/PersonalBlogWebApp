@@ -15,7 +15,7 @@
 
 		<% @articles.each do |article| %>
 		<div style="display: flex; justify-content: space-between;">
-			<h3><%= link_to article.title.first(20), article%>...<h4 style="color: gray;"><%= article.created_at.to_formatted_s(:short) %></h4></h3> 
+			<h3><%= link_to article.title, article%><h4 style="color: gray;"><%= article.created_at.to_formatted_s(:short) %></h4></h3> 
 		</div>
 		<% end %>
 	</div>

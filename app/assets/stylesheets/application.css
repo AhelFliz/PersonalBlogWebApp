@@ -24,7 +24,9 @@ a:hover {
   color: #1558b0;
 }
 
-button, input[type="submit"], button[type="submit"] {
+button,
+input[type="submit"],
+button[type="submit"] {
   background-color: white;
   color: black;
   border: 3px solid black;
@@ -33,27 +35,32 @@ button, input[type="submit"], button[type="submit"] {
   cursor: pointer;
 }
 
-.little-text-field{
+.little-text-field {
   border: 3px solid black;
   border-radius: 5px;
   margin: 10px;
-  width: 400px;
+  width: 720px;
   height: 30px;
 }
 
 .big-text-field {
-  width: 400px;
+  width: 720px;
   height: 150px;
   border: 3px solid black;
   border-radius: 5px;
   margin: 10px;
+  overflow: auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  resize: vertical;
 }
 
 .general-div {
   display: block;
   border: 4px solid black;
   border-radius: 5px;
-  width: 500px; 
-  text-align: left; 
+  width: 750px;
+  text-align: left;
   padding: 40px;
 }
